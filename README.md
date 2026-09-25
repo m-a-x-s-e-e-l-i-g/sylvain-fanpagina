@@ -9,7 +9,7 @@ The server-side endpoint discovers the event and athlete from public MSS Live an
 Node.js 20 or newer is required.
 
 ```sh
-npm run dev
+node server/dev.mjs
 ```
 
 Open `http://localhost:4173`.
@@ -17,8 +17,9 @@ Open `http://localhost:4173`.
 ## Verify
 
 ```sh
-npm test
-npm run check
+node --test
+node --check server/tracker-core.mjs
+node --check public/app.js
 ```
 
 ## Deploy
