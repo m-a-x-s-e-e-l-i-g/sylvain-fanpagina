@@ -165,6 +165,39 @@ body[data-state="error"] .status-dot { background: var(--error); }
   max-width: 34rem;
 }
 
+.personal-goal {
+  align-items: center;
+  background: color-mix(in oklch, var(--water) 14%, var(--paper));
+  border-block: 1px solid color-mix(in oklch, var(--water) 48%, var(--ink));
+  display: grid;
+  gap: .65rem 1.5rem;
+  grid-template-columns: auto minmax(0, 1fr);
+  margin-bottom: 1.25rem;
+  padding: 1rem;
+}
+
+.personal-goal .metric-label {
+  color: var(--ink-soft);
+  margin: 0;
+}
+
+.personal-goal strong {
+  display: block;
+  font-family: var(--display);
+  font-size: clamp(2rem, 7vw, 3.2rem);
+  font-variant-numeric: tabular-nums;
+  font-weight: 700;
+  letter-spacing: -.015em;
+  line-height: .95;
+  text-transform: uppercase;
+}
+
+.personal-goal p {
+  color: var(--ink-soft);
+  margin: 0;
+  max-width: 52ch;
+}
+
 .overall {
   align-items: end;
   background: var(--ink);
@@ -351,12 +384,14 @@ footer p { margin: 0; max-width: 48rem; }
 
 @media (min-width: 46rem) {
   .athlete { grid-template-columns: minmax(0, 1.5fr) minmax(16rem, .6fr); }
+  .personal-goal { padding: 1rem 2rem; }
   .overall { grid-template-columns: 1.35fr 1fr; margin-inline: 0; padding: 2rem; }
   .provenance { grid-template-columns: 1fr 1fr auto auto; }
 }
 
 @media (max-width: 34rem) {
   .event-meta span:first-child { display: none; }
+  .personal-goal { grid-template-columns: 1fr; }
   .leg-main { grid-template-columns: minmax(4.5rem, .65fr) 1fr; }
   .leg-position { grid-column: 1 / -1; text-align: left; }
   .provenance { grid-template-columns: 1fr; }
