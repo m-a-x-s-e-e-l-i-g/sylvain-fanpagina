@@ -1,0 +1,14 @@
+{
+  "name": "sylvain-leupen-live-tracker",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node server/dev.mjs",
+    "test": "node --test",
+    "check": "node --check server/tracker-core.mjs && node --check public/app.js"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#071a24">
+    <meta name="description" content="Live public timing for Sylvain Leupen at DTS Bosbaan 2026.">
+    <title>Sylvain Leupen — DTS Bosbaan live tracker</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Barlow+Condensed:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles.css">
+    <script type="module" src="/app.js"></script>
+  </head>
+  <body>
+    <header class="masthead">
+      <a class="event-mark" href="https://www.dutchtriathlons.nl/en-gb/dts-bosbaan" target="_blank" rel="noreferrer">
+        <span>DTS</span>
+        <strong>Bosbaan</strong>
+      </a>
+      <div class="event-meta">
+        <span>26 September 2026</span>
+        <span>Bosbaan · Amsterdam</span>
+      </div>
+    </header>
+
+    <main>
+      <section class="athlete" aria-labelledby="athlete-name">
+        <div class="athlete-heading">
+          <p class="eyebrow">One-athlete live timing</p>
+          <h1 id="athlete-name">Sylvain Leupen</h1>
+          <div class="identity" id="identity" aria-label="Athlete details">
+            <span>Bib —</span><span>Race —</span><span>Category —</span>
+          </div>
+        </div>
+        <div class="race-state">
+          <div class="status-line">
+            <span class="status-dot" aria-hidden="true"></span>
+            <span id="status-label">Finding athlete…</span>
+          </div>
+          <p id="status-message">Checking the public timing services.</p>
+        </div>
+      </section>
+
+      <section class="overall" aria-label="Overall result">
+        <div>
+          <span class="metric-label">Overall time</span>
+          <strong class="overall-time" id="overall-time">—</strong>
+        </div>
+        <dl class="ranking">
+          <div><dt>Overall</dt><dd id="overall-position">—</dd></div>
+          <div><dt>Category</dt><dd id="category-position">—</dd></div>
+          <div><dt>Last point</dt><dd id="last-point">—</dd></div>
+        </dl>
+      </section>
+
+      <div class="notice" id="notice" role="status" hidden></div>
+
+      <section class="course" aria-labelledby="course-title">
+        <div class="section-heading">
+          <h2 id="course-title">Race timeline</h2>
+          <span>Chip timing points</span>
+        </div>
+        <div id="course-list" class="course-list"></div>
+      </section>
+
+      <section class="provenance" aria-label="Timing source and refresh details">
+        <div>
+          <span class="metric-label">Public source</span>
+          <strong id="source-label">Discovering…</strong>
+        </div>
+        <div>
+          <span class="metric-label">Last checked</span>
+          <strong id="last-updated">—</strong>
+        </div>
+        <button id="refresh-button" type="button">Refresh now</button>
+        <span class="refresh-note" id="refresh-note">Automatic refresh enabled</span>
+      </section>
+    </main>
+
+    <footer>
+      <p>Unofficial viewer of publicly available MYLAPS / Sporthive / MSS Live data. Final results remain subject to the race organiser.</p>
+    </footer>
+
+    <noscript>This tracker needs JavaScript to refresh public race timing.</noscript>
+  </body>
+</html>
